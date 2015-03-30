@@ -19,6 +19,7 @@ sudo apt-get install -y php5 php5-mcrypt
 ## phpMyAdmin
 sudo apt-get install -y phpmyadmin
 sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo /bin/su -c 'echo "\$cfg['LoginCookieValidity'] = 28800;" >> /etc/phpmyadmin/config.inc.php'
 sudo a2enconf phpmyadmin 
 sudo service apache2 reload
 
