@@ -14,7 +14,7 @@ sudo apt-get install -y apache2 libapache2-mod-php5
 echo "mysql-server-5.5 mysql-server/root_password password abc123" | sudo debconf-set-selections
 echo "mysql-server-5.5 mysql-server/root_password_again password abc123" | sudo debconf-set-selections
 sudo apt-get install -y mysql-server php5-mysql
-sudo apt-get install -y php5 php5-mcrypt
+sudo apt-get install -y php5 php5-mcrypt php5-curl
 
 ## phpMyAdmin
 sudo apt-get install -y phpmyadmin
