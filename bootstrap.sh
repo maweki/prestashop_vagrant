@@ -9,6 +9,9 @@ sudo apt-get install -y unzip
 
 ## Apache
 sudo apt-get install -y apache2 libapache2-mod-php5
+sudo a2enmod rewrite
+
+sed -i "/DocumentRoot \/var\/www\/html/a#MGA\n<Directory /var/www>\nAllowOverride All\n</Directory>" /etc/apache2/sites-available/000-default.conf
 
 ## MySQL and PHP
 echo "mysql-server-5.5 mysql-server/root_password password abc123" | sudo debconf-set-selections
