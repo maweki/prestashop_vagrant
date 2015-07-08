@@ -56,6 +56,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     mount_options: ["dmode=775,fmode=664"],
     create: true
 
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "768"]
+  end
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
